@@ -2,12 +2,17 @@ import { WebSocketServer } from 'ws'
 
 const wss = new WebSocketServer({ port: process.env.PORT || 8080 })
 
+console.log(process.env.PORT)
+
 wss.on('connection', function connection(ws) {
-  ws.on('error', console.error)
 
-  ws.on('message', function message(data) {
-    console.log('received: %s', data)
-  })
+  ws.onerror = (e) => {
+    console.error(e)
+  }
 
-  ws.send('something')
+  ws.onmessage = (e) => {
+    console.log('received: %s', e.data)
+    ws.send(e.data)
+  }
+
 })
