@@ -2,20 +2,11 @@
   "name": "ws-signaling",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/roman-emerald/ws-signaling#readme",
-  "bugs": {
-    "url": "https://github.com/roman-emerald/ws-signaling/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/roman-emerald/ws-signaling.git"
-  },
   "license": "ISC",
   "author": "",
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
